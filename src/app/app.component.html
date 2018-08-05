@@ -1,9 +1,10 @@
 <div class="main-area">
   <h1 class="header">My Dictionary</h1>
-  <div class="form-area">
-    <input type="text" name="word" class="form-control" placeholder="Word"/>
-    <textarea name="definition" cols="10" class="form-control" rows="10" placeholder="Definition"></textarea>
+  <form class="form-area" (ngSubmit)="onSubmit()" #dictionaryform="ngForm">
+    <input type="text" [(ngModel)]="model.word" name="word" class="form-control" placeholder="Word" required/>
+    <textarea [(ngModel)]="model.definition" name="definition" cols="10" class="form-control" rows="10" placeholder="Definition" required></textarea>
     <input type="text" name="tags" class="form-control" placeholder="Tags"/>
-    <button class="btn-success">Save</button>
-  </div>
+    <button [disabled]="!dictionaryform.valid || ongoingSubmit" class="btn btn-success" type="submit">Submit</button>
+  </form>
+  
 </div>
