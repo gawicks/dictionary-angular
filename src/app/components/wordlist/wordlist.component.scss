@@ -1,0 +1,14 @@
+.list {
+    width: 75%;
+    max-width: 750px;
+    margin: 0px auto;
+}
+@media (max-width: 400px) {
+    .list {
+        width: 75%;
+        margin-left: 70px;
+    }
+}
+.word{
+    font-weight: bold;
+}

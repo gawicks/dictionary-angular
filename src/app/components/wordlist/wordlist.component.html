@@ -1,3 +1,7 @@
-<p>
-  wordlist works!
-</p>
+<div class="list">
+  <div *ngFor="let word of words|async">
+    <div class="word">{{ word.word}}</div>
+    <div class="definition">{{ word.definition}}</div>
+    <br/>
+  </div>
+</div>
